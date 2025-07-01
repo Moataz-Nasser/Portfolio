@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/hero-animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 </head>
 <body>
     <header>
@@ -203,7 +205,7 @@
 
             <div class="contact-form">
                 <h3>Contact Form</h3>
-                <form onsubmit="sendEmail(event)">
+                <form method="post" action="" onsubmit="sendEmail(event)">
                     <div class="form-group">
                         <label for="name"> Name</label>
                         <input type="text" name="name" id="name">
@@ -247,6 +249,6 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script src="js/script.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 </body>
 </html>

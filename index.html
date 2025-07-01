@@ -203,7 +203,7 @@
 
             <div class="contact-form">
                 <h3>Contact Form</h3>
-                <form action="post">
+                <form onsubmit="sendEmail(event)">
                     <div class="form-group">
                         <label for="name"> Name</label>
                         <input type="text" name="name" id="name">
@@ -219,7 +219,9 @@
                         <textarea name="msg" id="msg"></textarea>
                     </div>
 
-                    <input type="submit" value="Send" class="btn-primary" onsubmit="sendEmail()">
+                    <div class="g-recaptcha" data-sitekey="6LdpdXMrAAAAAILm2THuj9MKridWlDa8JJAYwQJb" data-action="LOGIN"></div>
+
+                    <input type="submit" value="Send" class="btn-primary">
                     
                 </form>
             </div>
@@ -240,16 +242,11 @@
         </footer>
     </main>
 
-    <script src="/js/script.js"></script>
+    
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init({
-                publicKey: "NMTmJ9hmFLh_Z_xSR",
-            });
-        })();
-    </script>
+    <script src="js/script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>

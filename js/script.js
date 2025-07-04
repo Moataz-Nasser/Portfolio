@@ -42,6 +42,21 @@ document.querySelectorAll('.form-group input, .form-group textarea').forEach(fie
 });
 
 
+// Phone menu
+
+const toggleMenu = document.getElementById("toggle-menu");
+const menu = document.getElementById("header-menu");
+
+toggleMenu.addEventListener("click", () => {
+    let isVisible = menu.getAttribute("data-visible");
+
+    if(isVisible === "false") {
+        menu.setAttribute("data-visible", "true");
+    } else {
+        menu.setAttribute("data-visible", "false");
+    }
+});
+
 
 emailjs.init("NMTmJ9hmFLh_Z_xSR");
 

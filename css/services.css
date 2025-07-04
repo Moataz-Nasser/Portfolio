@@ -1,0 +1,29 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    align-items: center;
+    width: 100%;
+}
+
+.services-container {
+    margin: 30px auto 0 auto;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    background: var(--clr-primary-background);
+}
+
+.service-title-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.service-icon {
+    font-size: var(--fs-400);
+}

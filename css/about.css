@@ -1,0 +1,130 @@
+.about {
+    width: 100%;
+    background: var(--clr-secondary-background);
+    padding: 50px 0;
+}
+
+.about-heading {
+    text-align: center;
+}
+
+.about-text {
+    width: 60%;
+    margin: 30px auto 0 auto;
+    text-align: center;
+
+    @media (max-width: 780px) {
+        width: 80%;
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 50px;
+}
+
+.skills-grid {
+    grid-template-columns: 1fr 1fr;
+    width: 92%;
+
+    @media only screen and (width < 780px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.skills-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    --icon-size: var(--fs-800);
+
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(var(--fs-xl) + (15px * 2));
+    padding-block: 70px;
+    align-items: center;
+    background-color: var(--clr-secondary-background);
+    overflow: hidden;
+    border-radius: 6px;
+
+    @media only screen and (width < 780px) {
+        width: 100%;
+    }
+}
+
+
+.skills li {
+    --animation-speed: 30s;
+
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 100%;
+    background: var(--clr-skills-bg);
+    padding: 15px 30px;
+    margin-right: 20px;
+    border-radius: 6px;
+    font-size: var(--icon-size);
+    width: 25%;
+    scroll-snap-align: center;
+    animation: auto-scroll var(--animation-speed) linear infinite;
+    animation-delay: calc((var(--animation-speed) / var(--n-skills)) * (var(--n-skills) - var(--skill)) * -1);
+}
+
+.skills-container::before, .skills-container::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.skills-container::before {
+    left: 0;
+}
+
+.skills-container::after {
+    right: 0;
+}
+
+.skills-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.skill-categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    padding-left: 50px;
+    gap: 10px;
+}
+
+.skill-category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-title::before {
+    content: "● ";
+
+}
+
+.category-skills {
+    margin: 0;
+}

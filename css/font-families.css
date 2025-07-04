@@ -1,4 +1,14 @@
 @font-face {
   font-family: 'Amanojaku';
-  src: url('../fonts//Amanojaku-Demo.otf') format('opentype');
+  src: url('../fonts/Amanojaku-Demo.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Exo2';
+  src: url('../fonts/Exo2.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Manrope.ttf';
+  src: url('../fonts/Manrope.ttf') format('truetype');
 }
